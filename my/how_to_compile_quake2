@@ -1,0 +1,62 @@
+Compiling Quake 2 from source can be a rewarding project, especially if you're interested in game development or retro gaming. 
+Here's a step-by-step guide to help you compile Quake 2:
+
+### Prerequisites
+
+1. **Development Tools**: Make sure you have the necessary development tools installed. This typically includes:
+   - A C/C++ compiler (GCC for Linux, Visual Studio for Windows).
+   - Make utility (make for Linux, nmake for Windows).
+   - Git (to clone the source code repository).
+
+2. **Source Code**: You can find the Quake 2 source code on various repositories. The most common one is the official GitHub repository:
+   - [Quake 2 GitHub Repository](https://github.com/id-Software/Quake-2)
+
+### Steps to Compile Quake 2
+
+#### 1. Clone the Repository
+
+Open your terminal or command prompt and clone the repository:
+
+```bash
+git clone https://github.com/id-Software/Quake-2.git
+cd Quake-2
+```
+
+#### 2. Install Dependencies
+
+Depending on your operating system, you may need to install additional dependencies. For example, on Ubuntu, you might need:
+
+```bash
+sudo apt-get update
+sudo apt-get install build-essential libgl1-mesa-dev libglu1-mesa-dev
+```
+
+For Windows, ensure you have Visual Studio installed with C++ development tools.
+
+#### 3. Build the Project
+
+- **Linux**: Use `make` to compile the project.
+
+```bash
+make
+```
+
+- **Windows**: Open the solution file (`.sln`) in Visual Studio and build the project.
+
+#### 4. Running the Game
+
+After compiling, you should have the executable in the `build` directory (or similar). You can run it from the terminal or command prompt:
+
+```bash
+./build/release/quake2
+```
+
+### Additional Notes
+
+- **Game Data**: Quake 2 requires game data files (`.pak` files) to run. You can find these files in an original installation of Quake 2. Copy them into the appropriate directory (usually the `baseq2` folder).
+  
+- **Modifications**: If you plan to modify the game, you might want to explore the source code and documentation provided in the repository.
+
+- **Community Resources**: There are many community resources, forums, and tutorials available if you encounter issues or want to learn more about modifying the game.
+
+By following these steps, you should be able to compile and run Quake 2 on your system. Enjoy your gaming experience!

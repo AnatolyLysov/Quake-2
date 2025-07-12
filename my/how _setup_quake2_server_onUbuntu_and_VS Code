@@ -1,0 +1,112 @@
+Setting up a Quake 2 server on Ubuntu using Visual Studio Code (VS Code) and CMake involves several steps. 
+Below is a detailed guide to help you through the process.
+
+### Prerequisites
+
+1. **Ubuntu**: Ensure you are using an Ubuntu system.
+2. **CMake**: Install CMake if you haven't already:
+
+   ```bash
+   sudo apt update
+   sudo apt install cmake
+   ```
+
+3. **Build Tools**: Install essential build tools:
+
+   ```bash
+   sudo apt install build-essential
+   ```
+
+4. **Git**: Install Git to clone the repository:
+
+   ```bash
+   sudo apt install git
+   ```
+
+5. **Visual Studio Code**: Install Visual Studio Code if you haven't already.
+
+6. **Required Libraries**: Install any required libraries:
+
+   ```bash
+   sudo apt install libgl1-mesa-dev libglu1-mesa-dev
+   ```
+
+### Steps to Set Up Quake 2 Server
+
+#### 1. Clone the Quake 2 Source Code
+
+Open a terminal and clone the Quake 2 repository:
+
+```bash
+git clone https://github.com/id-Software/Quake-2.git
+cd Quake-2
+```
+
+#### 2. Create a Build Directory
+
+It's a good practice to create a separate directory for the build:
+
+```bash
+mkdir build
+cd build
+```
+
+#### 3. Configure the Project with CMake
+
+Run CMake to configure the project:
+
+```bash
+cmake ..
+```
+
+If you need to specify a different generator or other options, you can do that here as well. 
+For example, if you want to use a specific version of GCC, you might run:
+
+```bash
+CC=gcc-10 CXX=g++-10 cmake ..
+```
+
+#### 4. Build the Project
+
+Now, compile the project using:
+
+```bash
+make
+```
+
+This will generate the necessary executables, including the server.
+
+#### 5. Running the Server
+
+Once the build process is complete, you can run the Quake 2 server. The executable 
+is usually located in the `build` directory. You can run it with:
+
+```bash
+./quake2
+```
+
+#### 6. Configure the Server
+
+You may want to set up configuration files for your server. Common files include `server.cfg` or similar, 
+where you can define server settings, game modes, and other parameters. You can create this file 
+in the appropriate directory, usually within the `baseq2` folder.
+
+### Using Visual Studio Code
+
+To work with the project in Visual Studio Code:
+
+1. **Open the Project**: Launch VS Code and open the Quake 2 directory.
+2. **Install CMake Tools Extension**: If you haven't already, install the CMake Tools extension from the VS Code marketplace.
+3. **Configure the Project**: Use the CMake Tools extension to configure and build the project from within VS Code.
+4. **Editing Code**: You can edit the source files and use the terminal in VS Code to run commands like `make`, `cmake`, etc.
+
+### Additional Notes
+
+- **Game Data Files**: Quake 2 requires game data files (like `.pak` files) to run. Ensure you have 
+these files in the appropriate directory (usually `baseq2`).
+- **Networking**: If you're setting up a multiplayer server, ensure that your firewall allows 
+traffic on the port that Quake 2 uses (default is usually 27960).
+- **Community Resources**: There are many community resources, forums, and tutorials available 
+if you encounter issues or want to learn more about modifying the game.
+
+By following these steps, you should be able to set up a Quake 2 server on Ubuntu using VS Code and CMake. If you have any further questions or run into issues, feel free to ask!
